@@ -1,0 +1,157 @@
+:root {
+  --red:#dc143c;
+}
+
+.work-wrapper {
+  margin-top: 5%;
+}
+
+.work-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.work-container h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.2rem;
+  line-height: 1.33;
+  font-weight: 800;
+  gap: 15px;
+}
+
+.work-heading {
+  color: var(--red);
+}
+
+.work-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+  margin-top: 50px;
+}
+
+.btn-work-style {
+  width: 6%;
+  height: 5%;
+  background-color: var(--red);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  /* margin: 10px; */
+}
+
+.btn-expe {
+  background-color: #eff4f2;
+  color: black;
+}
+
+.work-card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 90%;
+  justify-items: center;
+  margin: auto;
+  padding-top: 2%;
+}
+
+.work-card-container .gitNet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 40px;
+  margin-top: 18px;
+}
+
+.work-card-container .gitNet .netlify-work {
+  height: 30px;
+  width: 38px;
+}
+
+.work-card-container .gitNet .github-work {
+  height: 30px;
+  width: 38px;
+}
+
+.work-card-container .gitNet .netlify-work:hover {
+  color: #dc143c;
+  height: 35px;
+  width: 50px;
+}
+
+.work-card-container .gitNet .github-work:hover {
+  color: #dc143c;
+  height: 35px;
+  width: 50px;
+}
+
+.project-name {
+  text-align: center;
+}
+
+@media only screen and (max-width: 931px) {
+  .work-wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 50px;
+  }
+  .work-wrapper .work-container {
+    width: 98vw;
+    padding: 12px;
+  }
+  .work-wrapper .work-container h2 {
+    font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .work-wrapper .work-btn-wrapper {
+    justify-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 13px;
+  }
+  .work-wrapper .work-btn-wrapper .btn-work-style {
+    width: 20%;
+    font-weight: 600;
+  }
+  .work-wrapper .work-card-container {
+    display: block;
+    padding-top: 40px;
+  }
+  .work-wrapper .work-card-style {
+    padding: 10px;
+    margin: 20px;
+  }
+  .work-wrapper .gitNet .netlify-work:hover {
+    color: #dc143c;
+  }
+  .work-wrapper .gitNet .netlify-github:hover {
+    color: #dc143c;
+  }
+}
+/*# sourceMappingURL=work.css.map */

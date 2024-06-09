@@ -1,0 +1,125 @@
+:root{
+    --red:#dc143c;
+}
+
+.skill-heading{
+    color: var(--red);
+}
+
+.skill-wrapper{
+    margin-top: 4%;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header h2{
+display: flex;
+font-size: 2rem;
+line-height: 1.33;
+font-weight: 800;
+gap: 15px;
+overflow-wrap: break-word;
+
+}
+
+
+.btn-skill-style{
+    width: 7%;
+    height: 5%;
+    background-color: var(--red);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.style-skill{
+    width: 100%;
+}
+.skill-card{
+        width: 68%;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+.skill-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 26px;
+    margin-top: 2%;
+}
+
+
+.lang-style{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* grid-auto-flow: column; */
+    gap:23px;
+}
+.skill-name{
+    font-family: monospace;
+    margin-top: 10%;
+}
+
+.skill-grid{
+    display: grid;
+
+        margin: auto;
+    /* border: 1px solid red; */
+    text-align: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 14%) 5px 5px 15px;
+    width: 95px;
+
+}
+
+
+/* ======================================================== */
+
+
+@media only screen and (max-width:931px){ 
+
+    .skill-wrapper{
+        max-width: 100vw;
+        padding-top: 58px;
+    }
+    header h2{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        
+    }
+
+    .skill-btn-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-skill-style{
+        width: 80px;
+        height: 5%;
+        background-color: var(--red);
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 15px;
+    
+    }
+    .lang-style{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* grid-auto-flow: column; */
+        height: 100vh;
+        grid-gap:24px;
+    }
+
+
+}
+    

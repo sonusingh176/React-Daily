@@ -1,0 +1,139 @@
+.contact-wrapper {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 4%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 0.1fr 0.3fr;
+      grid-template-rows: 0.1fr 0.3fr;
+  gap: 10px;
+      grid-template-areas: "box1 box1" "box2 box3";
+}
+
+.box1-contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: box1;
+  margin: auto;
+}
+
+.box1-contact h2 {
+  font-size: 2rem;
+  line-height: 1.33;
+  font-weight: 800;
+  overflow-wrap: break-word;
+}
+
+.box1-contact span {
+  display: inline;
+  padding: 5px;
+  font-family: sans-serif;
+  color: #dd293c;
+}
+
+.box2-contact {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: box2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box2-contact .contactimage-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box2-contact .contact-Img {
+  width: 100%;
+}
+
+.box3-contact {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: box3;
+}
+
+.box3-contact .linkedin {
+  font-weight: 800;
+}
+
+.box3-contact .github {
+  background: #373b41;
+  font-weight: 800;
+}
+
+.box3-contact .gmail {
+  background: red;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 931px) {
+  .contact-wrapper {
+    display: block;
+    margin-top: 19%;
+    gap: 5px;
+  }
+  .contact-wrapper .box1-contact h2 {
+    font-size: 2rem;
+    line-height: 1.33;
+    font-weight: 800;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow-wrap: break-word;
+    /* text-align: center; */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-wrapper .box3-contact {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: box3;
+    margin: 5px 0px 2px 0px;
+  }
+  .contact-wrapper .box3-contact .stackIcon {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contact-wrapper .box3-contact .linkedin {
+    font-weight: 600;
+    margin: 0;
+  }
+  .contact-wrapper .box3-contact .github {
+    background: #373b41;
+    font-weight: 600;
+    margin: 0;
+  }
+  .contact-wrapper .box3-contact .gmail {
+    background: red;
+    font-weight: 600;
+    margin: 0;
+  }
+  .contact-wrapper .formBox {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

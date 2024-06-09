@@ -1,0 +1,62 @@
+[
+    {
+    "id":1,
+    "name":"KFC",
+    "about":"It's my major project where I've used MERN stack to make the clone of  KFC website along with backend integration and payment gateway integration with all the features of an Food-chain web app.",
+    "image":"./images/ban.png",
+    "tech":"mern"
+
+  },
+  {
+    "id":2,
+    "name":"OLX",
+    "about":"This is one of the best project ,which i have completed with my team. We have used HTML,CSS, Javascript and JSON tech stack for developing this e-commerce web app.",
+    "image":"./images/olx.jpg",
+    "tech":"javascript"
+  },
+  {
+    "id":3,
+    "name":"HOTSTAR",
+    "about":"This is a clone of Hotstar with backend integration, in which I implemented some functionalities like login & signup data authentication.You can search movie as per Your choice ",
+    "image":"./images/hotstar.png",
+    "tech":"javascript"
+  
+  },{
+    "id":4,
+    "name":"Recipes finder",
+    "about":"This app contain some delecious food recipes, i have made this using HTML,CSS,React",
+    "image":"./images/food.png",
+    "tech":"react"
+  },
+  {
+    "id":5,
+    "name":"Portfolio",
+    "about":"This is my beautiful protfolio app, i have made this using HTML,SCSS,React,Material UI",
+    "image":"./images/potf.jpg",
+    "tech":"react"
+  },
+  {
+    "id":6,
+    "name":"kaushik Tech",
+    "about":"It allows users to easily browse and purchase products from various retailers through a user-friendly interface. i have made this using HTML,CSS,React",
+    "image":"./images/tech.jpg",
+    "tech":"react"
+  },
+  {
+    "id":7,
+    "name":"Starwar umbrella",
+    "about":"User can select any Logo ,and print logo on umbrella and also choose various color as per choice ",
+    "image":"./images/umb.png",
+    "tech":"javascript"
+  },
+  {
+    "id":6,
+    "name":"Rapid Cart",
+    "about":"It is a E-commerce web app. user can perform add to cart, checkout, remove from cart.",
+    "image":"./images/rkart.png",
+    "tech":"javascript"
+  }
+
+
+
+]

@@ -1,0 +1,152 @@
+$myColor:#dd293c;
+
+.contact-wrapper{
+    // background-color: #e7f2ff;
+    // background-color: #e7f2ff;
+
+    display: grid;
+    margin-top: 4%;
+  
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:0.1fr 0.3fr;
+    gap:10px;
+    grid-template-areas: "box1 box1"
+                         "box2 box3";
+
+
+
+}
+.box1-contact{
+   // border: 1px solid red;
+    grid-area: box1;
+    margin: auto;
+   
+    
+    h2 {
+        font-size: 2rem;
+        line-height: 1.33;
+        font-weight: 800;
+        overflow-wrap: break-word;
+      }
+    
+      span {
+        display: inline;
+        padding: 5px;
+        font-family: sans-serif;
+        color:$myColor;
+      }
+}
+.box2-contact{
+    // border: 1px solid red;
+    grid-area: box2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contactimage-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+  
+    .contact-Img{
+         width: 100%;
+        
+    
+    }
+    
+}
+.box3-contact{
+   // border: 1px solid rgb(110, 18, 248);
+    grid-area: box3;
+
+    .linkedin{
+        font-weight: 800;
+    }
+
+    .github{
+        background: #373b41;
+        font-weight: 800;
+    }
+
+
+    .gmail{
+        background :red;
+       //color="primary" ko overwrite kr diya
+       font-weight: 800;
+    
+    }
+}
+
+
+
+
+
+    
+@media only screen and (max-width: 931px){
+    .contact-wrapper{
+        display: block;
+        margin-top: 19%;
+        gap:5px;
+
+
+        .box1-contact h2{
+            font-size: 2rem;
+            line-height: 1.33;
+            font-weight: 800;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-wrap: break-word;
+            /* text-align: center; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box3-contact{
+            // border: 1px solid rgb(110, 18, 248);
+             grid-area: box3;
+             margin: 5px 0px 2px 0px ;
+
+             .stackIcon{
+                justify-content: space-evenly;
+               // margin: 5px 0px 2px 0px ;
+                
+            }
+
+          
+         
+             .linkedin{
+                 font-weight: 600;
+                 margin: 0;
+             }
+         
+             .github{
+                 background: #373b41;
+                 font-weight: 600;
+                 margin: 0;
+             }
+         
+         
+             .gmail{
+                 background :red;
+                //color="primary" ko overwrite kr diya
+                font-weight: 600;
+                margin: 0;
+             
+             }
+            }
+
+      
+        .formBox{
+            width: 80%;
+        }
+
+        
+    }
+
+
+
+    
+}

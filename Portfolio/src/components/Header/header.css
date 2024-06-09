@@ -1,0 +1,125 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  color: crimson;
+  font-size: 35px;
+  font-weight: bold;
+  float: left;
+}
+
+nav li {
+  display: inline-block;
+  padding: 15px;
+}
+
+nav a {
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+a.active, a:hover {
+  background-color: crimson;
+  -webkit-transition: .8s;
+  transition: .8s;
+  color: whitesmoke;
+}
+
+#check, #collasp, #closeicon {
+  display: none;
+}
+
+/** 
+Dark mode
+*/
+.header-dark {
+  background-color: black;
+}
+
+.header-dark nav a {
+  color: white;
+}
+
+@media only screen and (max-width: 931px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5%;
+    height: 40px;
+  }
+  .logo {
+    font-size: 30px;
+    color: red;
+    float: left;
+    /* border: 1px solid red; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #check {
+    display: none;
+  }
+  #closeicon {
+    display: block;
+  }
+  #collasp {
+    display: block;
+    margin-top: 3px;
+  }
+  .image_contain {
+    text-align: center;
+  }
+  .mobilemenuOn {
+    position: fixed;
+    top: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    height: 100vh;
+    width: 100%;
+    left: 0%;
+    z-index: 1;
+    background-color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .mobilemenuOff {
+    display: none;
+  }
+  nav li {
+    display: inline-block;
+    padding: 15px;
+    width: 74%;
+  }
+}
+/*# sourceMappingURL=header.css.map */
