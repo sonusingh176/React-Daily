@@ -21,11 +21,10 @@ const ProductScreen = () => {
 
   useEffect(()=>{
     const fetchProduct =async ()=>{
-      const {data} =await axios.get(`/api/products/${productId}`);
+      const {data} =await axios.get(`/api/products/${productId}`);//since we added the proxy, we don't need to add localhost 5000 .
       setProduct(data);
     }
   
-
     fetchProduct();
   },[productId])
 

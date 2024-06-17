@@ -14,16 +14,22 @@ connectDB();
 
 const importData = async () =>{
     try {
+        
+        //These lines ensure that all existing documents in the Order, Product, and User collections are deleted before importing new data.
         await Order.deleteMany();
         await Product.deleteMany();
         await User.deleteMany();
 
+        //Inserts multiple documents into the collection(User) at once.
         const createUsers =await User.insertMany(users);
+        //retrieves the ID of the first user (assumed to be an admin).
         const adminUser =createUsers[0]._id;
+
         const sampleProducts = products.map((product) =>{
             return {...product, user:adminUser};
         });
 
+        //This inserts the updated product data (which includes the user field) into the Product collection.
         await Product.insertMany(sampleProducts);
         console.log('Data Imported'.green.inverse);
 
@@ -40,9 +46,11 @@ const importData = async () =>{
 
 const destroyData = async () =>{
     try {
+
         await Order.deleteMany();
         await Product.deleteMany();
         await User.deleteMany();
+        
         console.log('Data Destroyed!'.red.inverse);
         process.exit();
     } catch (error) {
