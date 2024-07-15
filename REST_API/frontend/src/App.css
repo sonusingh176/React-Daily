@@ -1,0 +1,49 @@
+.card-title {
+    height: 2rem; /* Set a fixed height for the title */
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.929em !important;
+  }
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    font-size: 0.8em !important;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .footer-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .heart-icon {
+    color: red; /* Set the color of the heart icon */
+  }
+  
+  .icon-count {
+    margin-left: 0.5rem;
+  }
