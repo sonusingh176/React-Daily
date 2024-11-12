@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import Badge from 'react-bootstrap/Badge';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaAlignJustify,FaUserCircle } from "react-icons/fa";
 import { useSelector } from 'react-redux';
@@ -10,6 +11,8 @@ const Header = ({Toggle}) => {
 
   const {user} = useSelector(state => state.user);
 
+  console.log(user,"header")
+
   return (
       <Navbar bg="dark" data-bs-theme="dark">
         <Container fluid className="d-flex justify-content-between align-items-center">
@@ -19,7 +22,7 @@ const Header = ({Toggle}) => {
  
           <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-          Signed in as: <Link to="/profile">{user?.name}   <FaUserCircle/> </Link>
+          <Badge bg="secondary">{user && user?.notifications.newNotification.length}</Badge> {' '}<Link to="/profile">{user?.name} </Link>
           </Navbar.Text>
         </Navbar.Collapse>
           

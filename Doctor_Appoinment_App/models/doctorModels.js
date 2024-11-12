@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const  mongoose =require('mongoose');;
 const { Schema } = mongoose;
 
 const doctorSchema = new Schema({
@@ -37,14 +37,18 @@ const doctorSchema = new Schema({
         type:String,
         required:[true,'experience is required'],
     },
-    feesPerCunsalation:{
+    feesPerConsultation:{
         type:Number,
         required:[true,'Fees is required'],
     },
     timing:{
         type:Object,
-        required:[true,'working timing is required']
-    }
+        // required:[true,'working timing is required']
+    },
+    status: {
+        type: String,
+        default: "pending",
+      },
 
 
 },{timestamps:true});
