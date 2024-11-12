@@ -1,0 +1,21 @@
+.sidebar{
+    margin: 5px 5px;
+}
+
+.sidebar a{
+    text-decoration: none;
+   
+}
+.sidebar a.active {
+    color: red;
+    background-color: aquamarine;
+    padding: 10px; 
+    border-radius: 0px; 
+    display: block;  /* this change the behavior of anchor tag. make it inline to block element. */
+  }
+
+  .logout-area:hover{
+    background-color: rgb(62, 43, 43);
+    color: aliceblue !important;
+
+  }

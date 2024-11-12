@@ -6,11 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "antd/dist/reset.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import {Provider} from 'react-redux'
+import store from './redux/store.js';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ToastContainer/>
-    <App />
+    <Provider store={store}>
+      <ToastContainer/>
+      <App />
+    </Provider>
+   
   </StrictMode>,
 )

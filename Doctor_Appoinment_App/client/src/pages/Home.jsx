@@ -2,7 +2,6 @@ import axios from "axios"
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 
-
 const Home = () => {
 
   const getUserData = async () => {
@@ -30,7 +29,13 @@ const Home = () => {
   },[]);
 
   return (
-    <div>Home</div>
+    <>
+   
+     <div>Home</div>
+    </>
+   
+   
+   
   )
 }
 

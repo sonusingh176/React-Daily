@@ -66,10 +66,10 @@ const registerUser = async(req,res)=>{
 }
 
 const authUser =async (req, res) => {
-    console.log(req,"LLG");
+    // console.log(req,"LLG");
     try {
-        const user = await User.findOne({_id:req.body.userId});
-        console.log(user,"user")
+        const user = await User.findById({_id:req.body.userId});
+        // console.log(user,"user")
         if(!user){
             return res.status(200).send({message:"user not found",success:false}); 
         }else{
@@ -77,6 +77,10 @@ const authUser =async (req, res) => {
                 data:{
                     name:user.name,
                     email:user.email,
+                    role: {
+                        isAdmin: user.isAdmin,
+                        isDoctor: user.isDoctor
+                    },
             }});
         }
         
@@ -85,4 +89,15 @@ const authUser =async (req, res) => {
     }
 }
 
-module.exports ={loginUser, registerUser,authUser};
+
+const applyDoctor =async(req,res)=>{
+    try {
+
+        res.send(res.body);
+        
+    } catch (error) {
+        
+    }
+}
+
+module.exports ={loginUser, registerUser,authUser,applyDoctor};

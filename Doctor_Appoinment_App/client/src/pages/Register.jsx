@@ -6,6 +6,8 @@ import Form from 'react-bootstrap/Form';
 import { Link ,useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import {toast} from 'react-toastify';
+import {useDispatch} from 'react-redux'
+import { showLoading,hideLoading } from '../redux/features/alertSlice';
 
 
 const Register = () => {
@@ -16,6 +18,8 @@ const Register = () => {
         password:"",
     });
 
+    
+    const dispatch =useDispatch();
     const navigate =useNavigate();
 
     const handleChange =(e)=>{
@@ -27,7 +31,9 @@ const Register = () => {
          e.preventDefault();
 
         try {
+            dispatch(showLoading())
             const response = await axios.post('/api/users/register',formData);
+            dispatch(hideLoading())
             if(response.data.success){
                toast.success(response.data.message);
                navigate('/login');

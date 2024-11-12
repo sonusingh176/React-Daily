@@ -4,42 +4,46 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {toast} from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+import { showLoading,hideLoading } from '../redux/features/alertSlice';
 
 const Login = () => {
+    
+    const dispatch =useDispatch();
+    const navigate = useNavigate();
 
     const [formData,setFormData] =useState({
         email:'',
         password:'',
     })
 
-    const navigate = useNavigate();
-
-    console.log(formData);
 
    const  handleChange=(event)=>{
     const {name,value} = event.target;
     setFormData((prev)=>({...prev,[name]:value}))
     }
 
+    const onSubmitHandler= async(e) => {
+        e.preventDefault();
 
-  const onSubmitHandler= async(e) => {
-    e.preventDefault();
-
-    try {
-        const res= await axios.post('/api/users/login',formData);
-        if(res.data.success) {
-            localStorage.setItem('hosp_token',res.data.token);
-            toast.success(res.data.username +' '+'logged In');
-            navigate('/');
+        try {
+            dispatch(showLoading());
+            const res= await axios.post('/api/users/login',formData);
+            dispatch(hideLoading());
+            if(res.data.success) {
+                localStorage.setItem('hosp_token',res.data.token);
+                toast.success(res.data.username +' '+'logged In');
+                navigate('/');
+            }
+                
+        } catch (error) {
+            dispatch(hideLoading())
+            toast.error(error?.response?.data.message || error.message || "Something went wrong..." )
+            console.log(error)
         }
-               
-    } catch (error) {
-        toast.error(error?.response?.data.message || error.message || "Something went wrong..." )
-        console.log(error)
-    }
 
-    
-  }
+        
+    }
 
   return (
     <div className="form-container">
