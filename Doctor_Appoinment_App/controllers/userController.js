@@ -156,4 +156,31 @@ const applyDoctor = async (req, res) => {
   }
 };
 
-module.exports = { loginUser, registerUser, authUser, applyDoctor };
+const getallNotification = async()=>{
+
+  try {
+  const user= await User.findOne({_id:req.body.userId})
+  const seenotification =user.seennotification;
+  const notification=user.notification;
+  seenotification.push(...notification)
+  user.notification = [];
+  user.seennotification=notification;
+  const updateUser = await user.save();
+  res.status(200).send({
+    success:true,
+    message:"all notification marked as read",
+    data:updateUser,
+    
+  })
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({
+      message:"Error in notification",
+      success : false,
+      error
+    })
+  }
+
+}
+
+module.exports = { loginUser, registerUser, authUser, applyDoctor,getallNotification };

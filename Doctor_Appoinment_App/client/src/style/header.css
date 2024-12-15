@@ -1,0 +1,12 @@
+.badgeiconcount{
+    padding: 5px;
+    background: white;
+    color: black;
+    border-radius: 100%;
+}
+
+.navtextstyle{
+    display: flex;
+    gap:1rem;
+    cursor: pointer;
+}
