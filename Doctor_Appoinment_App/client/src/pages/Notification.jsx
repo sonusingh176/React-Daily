@@ -23,7 +23,7 @@ const Notification = () => {
     >
       <Tab eventKey="unread" title="Unread">
         {
-          user.notifications
+          // user.notifications
           
         }
       </Tab>
