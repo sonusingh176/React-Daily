@@ -5,3 +5,41 @@
 
 
 }
+
+/* Light Theme */
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Dark Theme */
+  .dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Optional: Apply transition for smooth theme change */
+  .light-theme, .dark-theme {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .moonlight,.sunlight{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .sunlight{
+    color: black;
+   
+  }
+  .moonlight{
+    color: white;
+  }
+
+/* tailwind.css ya custom CSS file me */
+
+.polygon {
+  width: 350px; /* adjust to control the size */
+  aspect-ratio: 1;
+  clip-path: shape(from 88.04% 33.54%,curve to 88.04% 66.46% with 100% 50%,line to 77.41% 81.09%,curve to 46.1% 91.27% with 65.45% 97.55%,line to 28.9% 85.68%,curve to 9.55% 59.04% with 9.55% 79.39%,line to 9.55% 40.96%,curve to 28.9% 14.32% with 9.55% 20.61%,line to 46.1% 8.73%,curve to 77.41% 18.91% with 65.45% 2.45%);
+}
