@@ -9,8 +9,7 @@ const about = () => {
       {/* Heading */}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-semibold">
-          All{" "}
-          <span className="text-red-500 font-bold">About</span> Me And My{" "}
+          All <span className="text-red-500 font-bold">About</span> Me And My{" "}
           <span className="text-red-500 font-bold">Experience</span>
         </h2>
       </div>
@@ -27,6 +26,7 @@ const about = () => {
         >
           About Me
         </button>
+
         <button
           className={`px-6 py-2 rounded font-medium ${
             !showFirstDiv
@@ -61,21 +61,22 @@ const about = () => {
                 attention to detail.
               </li>
               <li>
-                I have done my <strong>BCA</strong> from Magadh University,
-                Bodh Gaya. I’ve also completed my Full-Stack Web Development
-                course from <strong>Masai School</strong>.
+                I have done my <strong>BCA</strong> from Magadh University, Bodh
+                Gaya. I’ve also completed my Full-Stack Web Development course
+                from <strong>Masai School</strong>.
               </li>
             </ul>
           ) : (
             <ul className="space-y-4 text-gray-700 text-lg">
               <li>
-                Highly motivated web developer with 6 months of experience in
-                front-end and back-end development. Skilled in HTML, CSS,
-                JavaScript, React, Node.js, and Express.
+                 
+                Results-oriented <strong>Full Stack Developer</strong> with <strong>2+</strong> years of experience building responsive, 
+                scalable, and secure web applications. Strong in problem-solving and team collaboration.
               </li>
               <li>
-                Knowledge of backend development using Node.js and Express.js,
-                with experience in MongoDB and MySQL databases.
+                Well-versed in <strong>Frontend Development</strong> using HTML, CSS, JavaScript,
+                and React.js,Inertia.js. Also experienced in <strong>Backend Development</strong> with
+                Node.js, Express.js, PHP, Laravel, MySQL, and MongoDB.
               </li>
               <li>
                 Familiarity with version control using <strong>Git</strong> and{" "}

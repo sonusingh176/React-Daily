@@ -12,7 +12,7 @@ const home = () => {
        
         <h3 className='text-4xl font-bold'>Hello,my name is </h3>
         <h1 className='text-7xl font-extrabold mt-2'>Sonu Kr singh</h1>
-        <p className='mt-4 text-5xl'>I'm a 
+        <p className='mt-4 text-5xl'>I'm a {" "}
         <TypeAnimation
             sequence={[
               'Full Stack Developer', 2000,
