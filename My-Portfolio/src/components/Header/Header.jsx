@@ -1,21 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { AiFillSun } from "react-icons/ai";
 import { AiOutlineMoon } from "react-icons/ai";
 
 import { ThemeContext } from "../../context/ThemeContext";
+import { Link as ScollLink} from "react-scroll";
 
 const Header = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
   const navLinks = [
     { name: "HOME", to: "/" },
     { name: "ABOUT", to: "/about" },
     { name: "WORK", to: "/works" },
     { name: "SKILLS", to: "/skills" },
     { name: "CONTACT", to: "/contact" },
-    { name: "RESUME", to: "/resume" },
+
   ];
+   
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(()=>{
+    const onScroll =()=>{
+      setScrolled(window.scrollY>50)
+    };
+
+
+  })
+
+
+  
 
   return (
     <header className={theme === "dark" ? "dark-theme" : "light-theme"}>

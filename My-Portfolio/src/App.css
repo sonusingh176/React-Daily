@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
-*{
-    /* background: linear-gradient(135deg, #fff9f5, #fef0e3); */
+/* *{
+    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-
-}
+} */
 
 /* Light Theme */
 .light-theme {

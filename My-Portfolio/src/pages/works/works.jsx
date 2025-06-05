@@ -4,25 +4,53 @@ import macotics from "../../assets/macotics.png";
 import sage from "../../assets/sage.png"
 import asha from "../../assets/asha.png" 
 import Cards from '../../components/Cards/Cards';
+import TechButton from '../../components/TechButtons/TechButton';
+
+const techs = [
+  "All",
+  "PHP/Laravel",
+  "MERN",
+  "React",
+  "Templates",
+];
 
 const cardData = [
   {
     image: machinery,
     title: "The Coldest Sunset",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tags: ["photography", "sunset", "travel"],
+    tech:"PHP/Laravel" ,
   },
   {
     image: macotics,
     title: "The Coldest Sunset",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tags: ["photography", "sunset", "travel"],
+    tech:"PHP/Laravel",
   },
+  {
+    image: asha,
+    title: "The Coldest Sunset",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tech:"MERN",
+  },
+
+  {
+    image: sage,
+    title: "The Coldest Sunset",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tech: "Templates",
+  },
+  
 ]
+
+
 
 const works = () => {
 
-   const [showTechSection, setShowTechSection] = useState(true);
+  const [selectedTech, setSelectedTech] = useState("All");
+
+  //filter login
+  const filtercards = selectedTech === "All" ? cardData : cardData.filter((card)=>card.tech === selectedTech);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
@@ -36,41 +64,31 @@ const works = () => {
          </div>
    
          {/* Buttons */}
-         <div className="flex justify-center gap-4 mb-8">
-           <button
-             className={`px-6 py-2 rounded font-medium ${
-              showTechSection
-                 ? "bg-red-600 text-white"
-                 : "bg-gray-200 text-gray-700 hover:bg-red-500 hover:text-white"
-             }`}
-             onClick={() => setShowTechSection(true)}
-           >
-            MERN
-           </button>
-   
-           <button
-             className={`px-6 py-2 rounded font-medium ${
-               !showTechSection
-                 ? "bg-red-600 text-white"
-                 : "bg-gray-200 text-gray-700 hover:bg-red-500 hover:text-white"
-             }`}
-             onClick={() => setShowTechSection(false)}
-           >
-             PHP/Laravel
-           </button>
+         
+         <div className='text-center mb-5'>
+         {techs.map((tech,index) => (
+          <TechButton
+            key={index}
+            name={tech}
+            isActive={selectedTech === tech}
+            onClick={() => setSelectedTech(tech)}
+          />
+        ))}
          </div>
+        
+        
    
          {/* Content Section */}
          <div className="flex flex-col md:flex-row items-center gap-8">
           
       {
-        cardData.map((card,index)=>(
+        filtercards.map((card,index)=>(
           <Cards 
             key={index}
             image={card.image}
             title={card.title}
             description={card.description}
-            tags={card.tags}/>
+            tech={card.tech}/>
         ))
       }
          
